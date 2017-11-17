@@ -1,0 +1,16 @@
+### Python template
+# Byte-compiled / optimized / DLL files
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment file
+nums.py
+
+
+.mypy_cache/
+
+# IntelliJ project files
+.idea
+*.iml
