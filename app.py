@@ -15,7 +15,7 @@ client = Client(account_sid, auth_token)
 client.messages.create(
     to=PHONE_NUMBER,
     from_=TWILIO_NUMBER,
-    body="Hi, this is management, you have USD 500 outstadning, reply Y if you already paid or M if you believe this is a mistake."
+    body="Hi Jane, this is management, you have AED 500 outstadning, to view and make a payment please view link below"
 )
 
 
@@ -39,7 +39,7 @@ def incoming_sms():
     if body == 'Y':
         resp.message("Thank you, we will update our records!")
     elif body == 'M':
-        resp.message("Thanks you, we will check our system for the error")
+        resp.message("Thank you, we will check our system for the error")
     else:
         resp.message("Good Bye!")
 

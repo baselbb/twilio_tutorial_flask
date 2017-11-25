@@ -8,7 +8,9 @@ app = Flask(__name__)
 def voice():
     resp = VoiceResponse()
 
-    resp.say("Hi Jan Smith, you received this message because you have an outstanding invoice with mansions management for USD 500 and 20 cents, please pay it as soon as possible")
+    resp.say("Hi Jan Smith, you received this message, because you have an outstanding invoice, with mansions management, for USD 500 and 20 cents, please pay it as soon as possible",
+             voice='alice'
+             )
 
     return str(resp)
 
