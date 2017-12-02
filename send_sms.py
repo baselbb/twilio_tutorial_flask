@@ -7,8 +7,12 @@ auth_token = AUTH_TOKEN
 
 client = Client(account_sid, auth_token)
 
-client.messages.create(
+print('Sending SMS....')
+message = client.messages.create(
     to=PHONE_NUMBER,
     from_=TWILIO_NUMBER,
     body="Hi, this is test, reply Y if you already paid"
 )
+
+print(message.sid)
+
